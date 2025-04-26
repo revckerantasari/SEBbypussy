@@ -1,0 +1,12 @@
+Bypass Safe Exam Browser buat VM
+Cocok buat yang mau joki tes, kaya tes toefl telkom, rbb, dan sejenisnya yang harus pake Safe Exam Browser. nanti tinggal jalanin TeamViewer diwindows aslinya biar bisa dikontrol orang lain dari jauh
+download VMware Workstation player (https://www.vmware.com/products/workstation-player.html)
+Install windows diVMnya
+kalo udah tinggal ditweak VMnya biar ga kedetect VM, kalian buka folder tempat kalian install windows buat VMnya tadi dan cari file ".vmx", buka file nya pake notepad trus tambahin smbios.reflecthost = "TRUE", kemudian save filenya.
+lanjut install Safe Exam Browser, disini kita pake versi yang 3,5.0.544 (https://sourceforge.net/projects/seb/files/seb/SEB_3.5.0/)
+kalo SEB udah diinstall, download safe-exam-browser-bypass (https://github.com/nxvvvv/safe-exam-browser-bypass/releases) sesuai versi SEB yang kalian download tadi, kalo udah masukin file SafeExamBrowser.Monitoring.dll, SafeExamBrowser.SystemComponents.dll dan SafeExamBrowser.Client.exe ke folder tempat kalian install SEB tadi (biasanya di C:\Program Files\SafeExamBrowser\Application)
+Sekarang kalian bisa buka SEB didalem VM, selebihnya tinggal setting sendiri aja windows kalian
+kalo tesnya wajib pasang kamera dari depan sama belakang yang nampilin layar, kalian bisa buka run trus masukin %APPDATA%\VMware\preferences.ini nanti tambahin pref.vmplayer.fullscreen.nobar = "TRUE"kemudian save, biar pas fullscreen VMnya gada menu bar diatasnya
+Note:
+- buat yang kena runtime error pas buka SEB, pake os windows 10/11 buat versi SEB 3.x (https://github.com/cefsharp/CefSharp/discussions/4336)
+- biar ga ngelag/error rekomen spek cpu4core/ram8gb (cek spek vmware https://docs.vmware.com/.../GUID-3CF87F1D-FD14-4FBA-A00C...)
